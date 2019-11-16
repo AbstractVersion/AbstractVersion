@@ -39,7 +39,7 @@ function create_security_section(){
   $('#udemy_container').append('<div class="w-100"><div class="subheading mb-3">Security</div><hr class="m-0"><div class="col-md-6 col-lg-4 col-xs-12" data-toggle="modal" data-target="#'+certificates[0]+'"><div class="services-item wow fadeInRight" data-wow-delay="'+"0.1s"+'"><img style="width:100%; height:100%;"src="img/skills/industry/cv.png" alt="Certificate Nmap"><div class="services-content"></div></div></div></div>');
 }
 function create_General_section(){
-  $('#udemy_container').append('<div class="w-100"><div class="subheading mb-3">General</div>/div>');
+  $('#udemy_container').append('<div class="w-100"><div class="subheading mb-3">General</div></div>');
 }
 
 var certificate_root_folder = "certificates/";
