@@ -2,16 +2,16 @@
 
 $( document ).ready(function() {
   let index = 0;
-  create_programming_section();
-  create_cloud_section();
-  create_ai_section();
-  create_security_section();
+  //create_programming_section();
+  //create_cloud_section();
+  //create_ai_section();
+  //create_security_section();
   create_General_section();
 
   certificates.forEach(function(element) {
     console.log(certificate_root_folder+element);
     $('#udemy_container').append('<div class="col-md-6 col-lg-4 col-xs-12" data-toggle="modal" data-target="#'+certificates[index]+'"><div class="services-item wow fadeInRight" data-wow-delay="'+"0."+index+"s"+'"><img style="width:100%; height:100%;"src="img/'+certificate_root_folder+element+png_ext+'" alt="Certificate Nmap"><div class="services-content"><h3><a href="#">'+certificates_name[index]+'</a></h3></div></div></div>');
-    $('#multy_modal_container').append(create_modal(certificates[index] + pdf_ext, certificates[index]));
+    //$('#multy_modal_container').append(create_modal(certificates[index] + pdf_ext, certificates[index]));
     index++;
   });
 
