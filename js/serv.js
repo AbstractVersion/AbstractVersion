@@ -7,10 +7,16 @@ $( document ).ready(function() {
   //create_ai_section();
   //create_security_section();
   create_General_section();
-
+  new_certificates.forEach(function(element) {
+    console.log(new_cert_path+element);
+    $('#udemy_container').append('<div class="col-md-6 col-lg-4 col-xs-12" data-toggle="modal" data-target="#'+new_certificates[index]+'"><div class="services-item wow fadeInRight" data-wow-delay="'+"0."+index+"s"+'"><img style="width:100%; height:100%;"src="'+new_cert_path+element+'" alt="Certificate"><div class="services-content"><h3><a href="#">'+new_certificates_name[index]+'</a></h3></div></div></div>');
+    //$('#multy_modal_container').append(create_modal(certificates[index] + pdf_ext, certificates[index]));
+    index++;
+  });
+  index = 0;
   certificates.forEach(function(element) {
     console.log(certificate_root_folder+element);
-    $('#udemy_container').append('<div class="col-md-6 col-lg-4 col-xs-12" data-toggle="modal" data-target="#'+certificates[index]+'"><div class="services-item wow fadeInRight" data-wow-delay="'+"0."+index+"s"+'"><img style="width:100%; height:100%;"src="img/'+certificate_root_folder+element+png_ext+'" alt="Certificate Nmap"><div class="services-content"><h3><a href="#">'+certificates_name[index]+'</a></h3></div></div></div>');
+    $('#udemy_container').append('<div class="col-md-6 col-lg-4 col-xs-12" data-toggle="modal" data-target="#'+certificates[index]+'"><div class="services-item wow fadeInRight" data-wow-delay="'+"0."+index+"s"+'"><img style="width:100%; height:100%;"src="img/'+certificate_root_folder+element+png_ext+'" alt="Certificate"><div class="services-content"><h3><a href="#">'+certificates_name[index]+'</a></h3></div></div></div>');
     //$('#multy_modal_container').append(create_modal(certificates[index] + pdf_ext, certificates[index]));
     index++;
   });
@@ -22,7 +28,32 @@ var certificates_cloud = ["certificates/cloud/AWS_Concepts_UC-YSAS3XJX_n","certi
 var certificates_general = ["certificates/general/Goal_crashingUC-4E3CHCH4_n","certificates/general/OPC_UC-MRQPYBZO","certificates/general/Learn_AWS_UC-MJR6H0U5_n","certificates/general/Startup-GrowUC-65VDHVQB"];
 var certificates_security = ["certificates/security/CCNA_CyberOps_kali_UC-CZTAAP2I","certificates/security/Network_hackingUC-WEWKWXAH","certificates/security/Nmap_UC-1HSWAUZE"];
 var certificates_software = ["certificates/software/Java_memory_managmentUC-JJCE710O","certificates/software/JUnit test ","certificates/software/Solution ArchitectUC-7IMMWK6Y","certificates/software/SQL_bootcamp_UC-VIX60M0D"];
+var new_cert_path = "certificates/new/"
+var new_certificates = [
+  "Apache Maven.png",
+  "Cassandra.png",
+  "DevOps.png",
+  "Java Web Services.png",
+  "Kube_Swarm.png",
+  "Master Hibernate and JPA with Spring Boot.jpg",
+  "Microservices Software Architecture Patterns and Techniques.jpg",
+  "MongoDB 3.2- Professional Developer.jpg",
+  "OOP.png",
+  "Spring Boot Microservices and Spring Cloud.jpg"
+]
 
+var new_certificates_name = [
+  "Apache Maven",
+  "Cassandra NoSQL Database",
+  "Jenkins, Ansible & Docker pipeline",
+  "Java Web Services",
+  "Kubernetes & Docker Swarm",
+  "Master Hibernate and JPA with Spring Boot",
+  "Microservices Software Architecture Patterns and Techniques",
+  "MongoDB Professional Developer",
+  "Object Oriented Programming",
+  "Spring Boot Microservices and Spring Cloud"
+]
 function create_ai_section(){
     $('#udemy_container').append('<div class="w-100"><div class="subheading mb-3">Artificial Inteligence</div><hr class="m-0"><div class="col-md-6 col-lg-4 col-xs-12" data-toggle="modal" data-target="#'+certificates[0]+'"><div class="services-item wow fadeInRight" data-wow-delay="'+"0.1s"+'"><img style="width:100%; height:100%;"src="img/skills/industry/cv.png" alt="Certificate Nmap"><div class="services-content"></div></div></div></div>');
 }
