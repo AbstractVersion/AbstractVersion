@@ -3,6 +3,14 @@ html {
   overflow-x: hidden;
 }
 
+.float-parent-element { 
+  width: 50%; 
+} 
+.float-child-element { 
+  float: left; 
+  width: 50%; 
+} 
+
 body {
   background: #fff;
   font-size: 14px;
